@@ -1,9 +1,9 @@
-import { useArchivedTodos, useTodos } from '../../storage/TodoHooks';
+import { useArchivedTodos } from '../../storage/TodoHooks';
 import { FlashList, ListRenderItemInfo } from '@shopify/flash-list';
 import { StyleSheet, View, Text } from 'react-native';
 import { Todo } from '../../models/Todo';
 import TodoView from '../../components/TodoView';
-import { useCallback, useMemo } from 'react';
+import { useCallback } from 'react';
 
 const ArchiveScreen = () => {
   const { todos } = useArchivedTodos();

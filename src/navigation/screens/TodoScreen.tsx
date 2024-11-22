@@ -3,8 +3,8 @@ import {
   NativeStackScreenProps,
 } from '@react-navigation/native-stack';
 import { RootParamList } from '../RootNavigator';
-import { RootScreens } from './screens';
-import { useTodo, useTodos } from '../../storage/TodoHooks';
+import { RootScreens } from './Screens';
+import { useTodo } from '../../storage/TodoHooks';
 import {
   ScrollView,
   StyleSheet,
@@ -35,7 +35,7 @@ const TodoScreen = ({ route }: Props) => {
 
   useLayoutEffect(() => {
     navigation.setOptions({
-      headerRight: (props) => {
+      headerRight: () => {
         return <EditTodoButton todoId={todo?.id} />;
       },
     });
@@ -58,7 +58,7 @@ const TodoScreen = ({ route }: Props) => {
   }
 
   function permanentlyDelete() {
-    deleteTodo(todo);
+    deleteTodo(todo!);
     navigation.goBack();
   }
 

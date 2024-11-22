@@ -8,7 +8,7 @@ export const HomeNavigator = createBottomTabNavigator({
     [HomeScreens.Home]: {
       screen: HomeScreen,
       options: {
-        headerRight: (props) => {
+        headerRight: () => {
           return <EditTodoButton />;
         },
       },

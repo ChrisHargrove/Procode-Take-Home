@@ -1,4 +1,3 @@
-import { useSelector } from 'react-redux';
 import { useTodos } from '../../storage/TodoHooks';
 import { FlashList, ListRenderItemInfo } from '@shopify/flash-list';
 import { StyleSheet, View } from 'react-native';
